@@ -10,7 +10,7 @@ const calistoga  = Calistoga({subsets:['latin'],
 })
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Mukul's Portfolio",
   description: "Created with the help of Frontend Tribe",
 };
 
