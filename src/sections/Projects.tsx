@@ -1,3 +1,6 @@
+"use client"
+import { motion } from 'framer-motion'
+import variants from '../utils/variants'
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -50,11 +53,18 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
   return <section className="pb-16 lg:py-24" id="projects">
     <div className="container">
+
+      <motion.div  initial="hidden"
+  whileInView="visible"
+  viewport={{ amount: 0.1 }}
+  variants={variants("bottom", 0.2)}>
       <SectionHeader
       title="Real-world Results"
       eyebrow="Featured Projects"
       description="See how i transformed concepts into engaging digital experience"
       />
+      </motion.div>
+     
       {/* <div className="flex justify-center">
         <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text text-center">Real-world Results</p>
       </div>

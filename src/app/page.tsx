@@ -1,4 +1,5 @@
 import { AboutSection } from "@/sections/About";
+import CompanyLogos from "@/sections/CompanyLogos";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { Header } from "@/sections/Header";
@@ -12,6 +13,7 @@ export default function Home() {
     <div>
       <Header/>
       <HeroSection/>
+      <CompanyLogos/>
       <ProjectsSection/>
       <TapeSection/>
       <TestimonialsSection/>

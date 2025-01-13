@@ -1,4 +1,7 @@
 "use client"
+import variants from '../utils/variants'
+import { motion } from 'framer-motion'
+
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import bookImage from '@/assets/images/book-cover.png'
@@ -13,7 +16,6 @@ import mapImage from '@/assets/images/map.png'
 import smileEmogi from '@/assets/images/memoji-smile.png'
 import CardHeader from "@/components/CardHeader";
 import ToolboxItem from "@/components/ToolboxItem";
-import { motion } from 'framer-motion'
 import { useRef } from "react";
 const toolboxItems = [
   {
@@ -108,14 +110,27 @@ export const AboutSection = () => {
 
     <div className="py-20 lg:py-28" id="about">
       <div className="container">
+        <motion.div
+           initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.1 }}
+          variants={variants("bottom", 0.1)}
+        >
         <SectionHeader
           title="About Me"
           eyebrow="A Glimpse Into My World"
           description="Learn more about who I am, what I Do, and what inspired me."
         />
+        </motion.div>
+
         <div className="mt-20 flex flex-col gap-8">
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+          <motion.div 
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ amount: 0.1 }}
+          // variants={variants("left", 0.1)}
+          className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
 
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
@@ -141,9 +156,14 @@ export const AboutSection = () => {
               />
             </Card>
 
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+          <motion.div 
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ amount: 0.1 }}
+          // variants={variants("right", 0.1)}
+          className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
 
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader title="Beyond the Code"
@@ -179,7 +199,7 @@ export const AboutSection = () => {
               </div>
             </Card>
 
-          </div>
+          </motion.div>
 
         </div>
       </div>

@@ -1,3 +1,6 @@
+"use client"
+import { motion } from 'framer-motion'
+import variants from '../utils/variants'
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
@@ -45,10 +48,17 @@ export const TestimonialsSection = () => {
   return (
     <div className="py-16 lg:py-24">
       <div className="container">
+        <motion.div 
+         initial="hidden"
+         whileInView="visible"
+         viewport={{ amount: 0.1 }}
+         variants={variants("bottom", 0.2)}
+        >
         <SectionHeader title="Happy Clients"
           eyebrow="What Client Say about me"
           description="Don't just take my word for it. See what my clients have to say about my work."
         />
+        </motion.div>
         <div className="mt-12 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
           <div className="flex flex-none gap-8 pr-8 animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
             {[...new Array(2)].fill(0).map((_, idx) => (
