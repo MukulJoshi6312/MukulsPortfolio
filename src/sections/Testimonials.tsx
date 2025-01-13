@@ -5,8 +5,6 @@ import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
-
-import grainImage from '@/assets/images/grain.jpg'
 import Card from "@/components/Card";
 import { Fragment } from "react";
 
