@@ -16,3 +16,8 @@
         @apply lg:max-w-5xl;
     }
 }
+
+::selection {
+    background-color: #34d399; 
+    color: #ffffff;
+}

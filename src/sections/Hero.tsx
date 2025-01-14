@@ -11,7 +11,17 @@ import SparkleIcon from '@/assets/icons/sparkle.svg'
 
 import { HeroOrbit } from '@/components/HeroOrbit';
 export const HeroSection = () => {
-  return <div id='home' className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:mukuljoshi6312@gmail.com?subject=Let\'s Connect&body=Hi, I would like to connect with you!';
+  };
+
+  const handleProjectClick = () =>{
+    window.location.href = "#projects";
+  }
+
+
+  return <div id='home' className='py-32 md:py-48 lg:py-50 relative z-0 overflow-x-clip'>
     <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
       <div className='absolute inset-0 -z-30 opacity-5' style={{ backgroundImage: `url(${grainImage.src})` }}></div>
       <div className='size-[620px] hero-ring'></div>
@@ -26,6 +36,7 @@ export const HeroSection = () => {
         </div>
       </div>
       </div> */}
+
       <HeroOrbit size={430} rotation={-14} shouldOrbit orbitDuration='30s' shouldSpin spinDuration="3s">
         <SparkleIcon className="size-8 text-emerald-300/20" />
       </HeroOrbit>
@@ -62,6 +73,10 @@ export const HeroSection = () => {
         <div className="size-3 rounded-full bg-emerald-300/20" />
       </HeroOrbit>
 
+      <HeroOrbit size={800} rotation={72} shouldOrbit orbitDuration='48s' shouldSpin spinDuration="6s">
+        <StartIcon className="size-24 text-emerald-300/50"/>
+      </HeroOrbit>
+
       <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration='48s' shouldSpin spinDuration="6s">
         <StartIcon className="size-28 text-emerald-300"/>
       </HeroOrbit>
@@ -71,47 +86,60 @@ export const HeroSection = () => {
 
     <div className="container">
       <motion.div 
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+          duration: 0.4,
+          scale: { type: "spring", visualDuration: 0.3, bounce: 0.3 },
+      }}
       className='flex flex-col items-center'>
         <Image src={memojiImage} alt='person peeking from behind laotop' className='size-[100px]' />
         <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
           <div className='bg-green-500 size-2.5 rounded-full relative'>
             <div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large'> </div>
           </div>
-          <div className='text-sm font-medium'>Available for new projects</div>
+          <div className='text-sm font-medium'>Available for opportunities</div>
         </div>
       </motion.div>
       <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.1 }}
+      viewport={{once:true, amount: 0.3 }}
       variants={variants("bottom", 0.1)}
       className='max-w-lg mx-auto'>
         <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Bulding Exceptionl user Experience</h1>
+        <p className='text-center text-lg font-semibold my-2 tracking-wider'>Hey there! I&apos;m <span className='bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text'>Mukul</span> a <span className='bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text'>Software Developer</span>  based in India</p>
         <p className='mt-4 text-center text-white/60 md:text-lg'>I specialize in transforming design inot functional, high-performing web applications. Let&apos;s discuss your next project.</p>
       </motion.div>
 
       <div 
       className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
+        
+    
         <motion.button 
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.1 }}
         variants={variants("left", 0.1)}
-        className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
+        className='cursor-pointer inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-30'
+        onClick={handleProjectClick}>
           <span className='font-semibold'>Explore my work</span>
-          <ArrowDown className="size-4" />
+          <ArrowDown className="size-4 animate-arrow-down" />
         </motion.button>
+   
 
         <motion.button 
-        
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.1 }}
         variants={variants("right", 0.1)}
-        className='inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
-          <span>👋</span>
+        className='cursor-pointer inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl z-30'
+        onClick={handleEmailClick}
+        >
+          <span className='animate-hand-move'>👋</span>
           <span className='font-semibold'>Let&apos;s Connect</span>
         </motion.button>
+
       </div>
     </div>
   </div>

@@ -51,7 +51,7 @@ export const TestimonialsSection = () => {
         <motion.div 
          initial="hidden"
          whileInView="visible"
-         viewport={{ amount: 0.1 }}
+         viewport={{once:true, amount: 0.3 }}
          variants={variants("bottom", 0.2)}
         >
         <SectionHeader title="Happy Clients"

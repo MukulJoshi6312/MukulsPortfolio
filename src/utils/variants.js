@@ -13,7 +13,7 @@ const variants = (direction, delay) => {
         y: "0%",
         // scale: 1, // Scales up to 1 (100%)
         transition: {
-          type: 'tween',
+          tyep:"tween",
           duration: 0.6,
           delay: delay,
           ease: [0.25, 0.25, 0.25, 0.75],

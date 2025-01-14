@@ -9,32 +9,51 @@ import CheckIcon from '@/assets/icons/check-circle.svg'
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
 import grainImage from '@/assets/images/grain.jpg'
 import SectionHeader from "@/components/SectionHeader";
+import cryptoImage from '@/assets/images/crypto1.png'
 import Card from "@/components/Card";
+import Github from '@/assets/images/github.png'
+import positivus from '@/assets/images/positivus.png'
+import usabilityHub from '@/assets/images/usabilityHub.png'
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "CryptoBucks.",
+    year: "2024",
+    title: "Track Crypto Real Time.",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://crypto-bucks-theta.vercel.app/",
+    githubLink: "https://github.com/MukulJoshi6312/DoscApp",
+    image: cryptoImage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Positivus",
+    year: "2023",
+    title: "Digital Agency Landing Page",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://makes-brands.vercel.app/",
+    githubLink: "https://github.com/MukulJoshi6312/MakesBrands",
+    image: positivus,
+  },
+  {
+    company: "UsabilityHub",
+    year: "2022",
+    title: "We have a new name, fresh look!",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://mukuljoshi6312.github.io/usabilityhub-clone/",
+    githubLink: "https://github.com/MukulJoshi6312/usabilityhub-clone",
+    image: usabilityHub,
   },
   {
     company: "Quantum Dynamics",
@@ -45,7 +64,8 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://crypto-bucks-theta.vercel.app/",
+    githubLink: "https://github.com/MukulJoshi6312/DoscApp",
     image: aiStartupLandingPage,
   },
 ];
@@ -54,17 +74,17 @@ export const ProjectsSection = () => {
   return <section className="pb-16 lg:py-24" id="projects">
     <div className="container">
 
-      <motion.div  initial="hidden"
-  whileInView="visible"
-  viewport={{ amount: 0.1 }}
-  variants={variants("bottom", 0.2)}>
-      <SectionHeader
-      title="Real-world Results"
-      eyebrow="Featured Projects"
-      description="See how i transformed concepts into engaging digital experience"
-      />
+      <motion.div initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={variants("bottom", 0.2)}>
+        <SectionHeader
+          title="Real-world Results"
+          eyebrow="Featured Projects"
+          description="See how i transformed concepts into engaging digital experience"
+        />
       </motion.div>
-     
+
       {/* <div className="flex justify-center">
         <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text text-center">Real-world Results</p>
       </div>
@@ -73,13 +93,13 @@ export const ProjectsSection = () => {
 
       <div className="flex flex-col mt-10 gap-20 md:mt-20">
         {
-          portfolioProjects.map((project,index) => (
+          portfolioProjects.map((project, index) => (
             <Card key={project.title}
-             className=" px-8 pb-0 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
-             style={{
-              top:`calc(64px + ${index * 40}px)`
-             }}>
-              
+              className=" px-8 pb-0 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              style={{
+                top: `calc(64px + ${index * 40}px)`
+              }}>
+
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
 
                 <div className="lg:pb-16">
@@ -101,12 +121,22 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link} target="_blank">
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto md:px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Visit Live Site</span>
-                      <ArrowUpRightIcon className="size-4" />
-                    </button>
-                  </a>
+                  <div className='flex items-center gap-2'>
+                    <a href={project.link} target="_blank" className='w-full md:w-max'>
+                      <button className="bg-white text-gray-950 h-12 w-full md:w-auto md:px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                        <span>Visit Live Site</span>
+                        <ArrowUpRightIcon className="size-4" />
+                      </button>
+                    </a>
+
+                    <a href={project.githubLink}>
+                      <div className='size-12 bg-white p-2 rounded-full mt-8'>
+                        <Image src={Github} alt={project.title} />
+                      </div>
+                    </a>
+                  </div>
+
+
                 </div>
                 <div className="relative">
                   <Image src={project.image} alt={project.title}
@@ -119,3 +149,6 @@ export const ProjectsSection = () => {
     </div>
   </section>;
 };
+
+// className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" />
+

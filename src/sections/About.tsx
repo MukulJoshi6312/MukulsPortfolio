@@ -106,6 +106,15 @@ export const AboutSection = () => {
 
   const constrainRef = useRef(null)
 
+  const handleLocation = ()=>{
+  const latitude = 29.291639;
+  const longitude = 78.512694;
+  // Construct the Google Maps URL
+  const googleMapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
+  // Open the URL in a new tab
+  window.open(googleMapsUrl, "_blank");
+  }
+
   return (
 
     <div className="py-20 lg:py-28" id="about">
@@ -113,7 +122,7 @@ export const AboutSection = () => {
         <motion.div
            initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0.1 }}
+          viewport={{once:true, amount: 0.1 }}
           variants={variants("bottom", 0.1)}
         >
         <SectionHeader
@@ -188,7 +197,9 @@ export const AboutSection = () => {
               </div>
             </Card>
 
-            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
+            <Card
+            onClick={handleLocation}
+            className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
               <Image src={mapImage} alt="map image" className="h-full
             w-full object-cover object-left-top " />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:outline after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
@@ -197,6 +208,9 @@ export const AboutSection = () => {
                 <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image src={smileEmogi} alt="smilememogi" className="size-20" />
               </div>
+                <div className='absolute text-xs bottom-2 left-2 font-bold bg-gray-900/70 px-4 py-1.5 rounded-full'>
+                📍INDIA
+                </div>
             </Card>
 
           </motion.div>
