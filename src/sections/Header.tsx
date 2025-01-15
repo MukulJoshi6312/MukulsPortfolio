@@ -38,12 +38,18 @@ export const Header = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
-      transition={{
-        duration: 0.4,
-        scale: { type: "spring", stiffness: 300, damping: 30 },
-      }}
+      // initial={{ opacity: 0, scale: 0 }}
+      // animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
+      // transition={{
+      //   duration: 0.4,
+      //   scale: { type: "top", stiffness: 300, damping: 30 },
+      // }}
+     
+      initial="hidden"
+     whileInView="visible"
+     animate={{ translateY: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
+     viewport={{ amount: 0.1 }}
+     variants={variants("top", 0.1)}
       className="flex justify-center items-center fixed w-full top-3 z-10"
     >
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/15 backdrop:blur ">

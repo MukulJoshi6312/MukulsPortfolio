@@ -107,9 +107,9 @@ export const HeroSection = () => {
       viewport={{once:true, amount: 0.3 }}
       variants={variants("bottom", 0.1)}
       className='max-w-lg mx-auto'>
-        <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Bulding Exceptionl user Experience</h1>
-        <p className='text-center text-lg font-semibold my-2 tracking-wider'>Hey there! I&apos;m <span className='bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text'>Mukul</span> a <span className='bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text'>Software Developer</span>  based in India</p>
-        <p className='mt-4 text-center text-white/60 md:text-lg'>I specialize in transforming design inot functional, high-performing web applications. Let&apos;s discuss your next project.</p>
+        <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Innovative solutions for a connected world.</h1>
+        <p className='text-center text-lg font-semibold my-4 tracking-wider'>Hey there! I&apos;m <span className='bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text'>Mukul</span> a <span className='bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text'>Software Developer</span>  based in India</p>
+        <p className='mt-4 text-center text-white/60 md:text-lg'>Turning ideas into powerful, efficient, and user-focused software <span className='bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text'>solutions.</span> Let&apos;s bring your project to life!</p>
       </motion.div>
 
       <div 

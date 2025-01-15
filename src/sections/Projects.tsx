@@ -121,11 +121,11 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className='flex items-center gap-2'>
+                  <div className='flex items-center gap-2 '>
                     <a href={project.link} target="_blank" className='w-full md:w-max'>
-                      <button className="bg-white text-gray-950 h-12 w-full md:w-auto md:px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                      <button className="group bg-white text-gray-950 h-12 w-full md:w-auto md:px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                         <span>Visit Live Site</span>
-                        <ArrowUpRightIcon className="size-4" />
+                        <ArrowUpRightIcon className="size-4 group-hover:rotate-45 transition" />
                       </button>
                     </a>
 

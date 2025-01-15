@@ -23,8 +23,8 @@ const CompanyLogos = () => {
             <Fragment key={idx}>
               {
                 logoList.map((logo,index) => (
-                    <div key={index} className='size-32  bg-transparent flex items-center gap-4'>
-                    <Image src={logo} alt='logo'/>
+                    <div key={index} className='flex items-center gap-4'>
+                    <Image src={logo} alt='logo' className='w-40 h-1/3'/>
                     </div>
                 ))
               }

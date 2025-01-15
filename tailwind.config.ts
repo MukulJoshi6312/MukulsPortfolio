@@ -32,6 +32,7 @@ const config: Config = {
         'move-right': "move-right 30s linear infinite",
         'hand-move': "hand-move 2s linear infinite",
         'arrow-down':"arrow-down 2s linear infinite",
+        'gradient': 'gradient 5s ease infinite',
       },
       keyframes: {
         'ping-large': {
@@ -77,6 +78,17 @@ const config: Config = {
           },
           '100%': {
             transform: 'translateY(0%)',
+          },
+        },
+        'gradient': {
+          '0%': {
+            backgroundPosition: '0% 50%',
+          },
+          '50%': {
+            backgroundPosition: '100% 50%',
+          },
+          '100%': {
+            backgroundPosition: '0% 50%',
           },
         },
       },

@@ -16,7 +16,11 @@ import mapImage from '@/assets/images/map.png'
 import smileEmogi from '@/assets/images/memoji-smile.png'
 import CardHeader from "@/components/CardHeader";
 import ToolboxItem from "@/components/ToolboxItem";
-import { useRef } from "react";
+import heroImage from '@/assets/images/heroImage.png'
+import { useRef, useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import celebrationGif from '@/assets/images/coprgif.gif'
+
 const toolboxItems = [
   {
     title: "JavaScript",
@@ -102,6 +106,7 @@ const hobbies = [
 
 ]
 
+
 export const AboutSection = () => {
 
   const constrainRef = useRef(null)
@@ -113,6 +118,26 @@ export const AboutSection = () => {
   const googleMapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
   // Open the URL in a new tab
   window.open(googleMapsUrl, "_blank");
+  }
+
+  const [emailText, setEmailText] = useState("Copy my email address");
+  const [showGif, setShowGif] = useState(false);
+
+
+  const copyEmailHandler = () =>{
+    const email = "mukuljoshi6312@gmail.com";
+    navigator.clipboard.writeText(email).then(()=>{
+      setEmailText("Email is copied!"); // Change button text
+      setShowGif(true); // Show the GIF
+
+        setTimeout(() => {
+          setEmailText("Copy my email address"); // Reset after 3 seconds
+          setShowGif(false); // Show the GIF
+
+        }, 3000);
+    }).catch((error)=>{
+        console.log("failed  to copy email",error);
+    })
   }
 
   return (
@@ -214,6 +239,48 @@ export const AboutSection = () => {
             </Card>
 
           </motion.div>
+
+
+          <motion.div 
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ amount: 0.1 }}
+          // variants={variants("left", 0.1)}
+          className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3 md:mt-8">
+
+            <div className='h-[420px] md:col-span-2 lg:col-span-1 relative '>
+            <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-emerald-300 
+              animate-gradient [animation-duration:2s] bg-no-repeat  rounded-3xl"></div>
+                <div className='absolute bottom-0 left-4 md:left-0'>
+                <Image src={heroImage} alt='hero image' className='w-[300px]'/>
+                </div>
+            </div>
+            <div className='h-[420px] p-0 md:col-span-3 lg:col-span-2 py-4 relative'>
+             
+              <h3 className='font-serif text-3xl md:text-3xl lg:text-6xl tracking-wider'>Know who am I</h3>
+              <h4 className='py-3 md:text-2xl text-lg'>My journey in few words</h4>
+              <p className='text-white/60 tracking-normal leading-7 text-sm md:text-lg'>I&apos;ve designed multiple web & mobile experiences for multi-cross-platform devices from TV to Ipads, etc. I&apos;ve worked with small agencies and also with medium-sized companies. I previously worked with one of India&apos;s largest Ed-Tech startups, Toppr which later got acquired by Byjus. Currently I'm designing aesthetic and functional solutions for smallcase within the invest team, to enhance financial accessibility and understanding for Indian users.</p>
+              
+
+              <Card className='inline-flex mt-6 '>
+
+              <div className=' bottom-2 inline-flex py-1.5 px-4 cursor-pointer items-center gap-3 transition duration-500 '
+              onClick={copyEmailHandler}>
+                <p>{emailText}</p>
+                <IoCopyOutline/>
+              </div>
+              </Card>
+
+              {showGif && (
+        <div className="absolute -bottom-10 z-10 rounded-lg">
+          <Image src={celebrationGif} alt="Celebration Animation" className="h-56 w-56 transition duration-500" />
+        </div>
+      )}
+
+              
+            </div>
+
+          </motion.div> 
 
         </div>
       </div>
