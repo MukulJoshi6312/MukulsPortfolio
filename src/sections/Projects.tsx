@@ -51,7 +51,7 @@ const portfolioProjects = [
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://mukuljoshi6312.github.io/usabilityhub-clone/",
+    link: "https://usabilityhub-clone-one.vercel.app/",
     githubLink: "https://github.com/MukulJoshi6312/usabilityhub-clone",
     image: usabilityHub,
   },
