@@ -17,12 +17,12 @@ export default function Home() {
       <Header/>
       <HeroSection/>
       <CompanyLogos/>
-      <ProjectsSection/>
-      <TapeSection/>
-      <TestimonialsSection/>
       <AboutSection/>
       <Experience/>
       <MyApproach/>
+      <ProjectsSection/>
+      <TapeSection/>
+      <TestimonialsSection/>
       <Faqs/>
       <ContactSection/>
       <Footer/>
