@@ -12,6 +12,11 @@ import CssIcon from '@/assets/icons/css3.svg'
 import ReactIcon from '@/assets/icons/react.svg'
 import ChromeIcon from '@/assets/icons/chrome.svg'
 import GithubIcon from '@/assets/icons/github.svg'
+import Java from '@/assets/icons/java.svg'
+import Sql from '@/assets/icons/sql.svg'
+import googleCloud from '@/assets/icons/gcd.svg'
+import Androidsvg from '@/assets/icons/svgAndroid.svg'
+import NextJs from '@/assets/icons/svgNextJs.svg'
 import mapImage from '@/assets/images/map.png'
 import smileEmogi from '@/assets/images/memoji-smile.png'
 import CardHeader from "@/components/CardHeader";
@@ -31,39 +36,48 @@ const toolboxItems = [
     iconType: ReactIcon
   },
   {
-    title: "Node Js",
-    iconType: HTMLIcon
+    title: "Next JS",
+    iconType: NextJs
   },
   {
     title: "Java",
-    iconType: JavaScriptIcon
+    iconType: Java
+  },
+  {
+    title: "Android",
+    iconType: Androidsvg
+  },
+  {
+    title: "SQL",
+    iconType: Sql
+
+  },
+  {
+    title: "HTML",
+    iconType: HTMLIcon
   },
   {
     title: "CSS",
     iconType: CssIcon
   },
   {
-    title: "Next JS",
-    iconType: JavaScriptIcon
-  },
-  {
     title: "Chrome",
     iconType: ChromeIcon
+  },
+  {
+    title: "Google Cloud",
+    iconType: googleCloud
   },
   {
     title: "Github",
     iconType: GithubIcon
   },
-  {
-    title: "Android",
-    iconType: HTMLIcon
-  }
 ]
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: '🎨',
+    title: "Dancing",
+    emoji: '🕺',
     top: "5%",
     left: "5%",
   },
@@ -105,6 +119,8 @@ const hobbies = [
   },
 
 ]
+
+const myBio = `I craft seamless web and mobile experiences for multi-cross-platform devices. With experience working with agencies and medium-sized companies, including India's largest Ed-Tech startup, Toppr, I've now dedicated my efforts to designing elegant and functional solutions at Bitwise and PayNav. As a self-motivated and confident professional, I view coding as a passion, continuously enhancing my skills to create impactful solutions that improve financial accessibility for Indian users.`
 
 
 export const AboutSection = () => {
@@ -169,7 +185,7 @@ export const AboutSection = () => {
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My Reads"
-                description="Explore the books shaping my perspective"
+                description="Delve into the pages shaping my journey."
               />
               <div className="w-40 mx-auto mt-2 ">
                 <Image src={bookImage} alt="Book cover image" />
@@ -259,7 +275,7 @@ export const AboutSection = () => {
              
               <h3 className='font-serif text-3xl md:text-3xl lg:text-6xl tracking-wider'>Know who am I</h3>
               <h4 className='py-3 md:text-2xl text-lg'>My journey in few words</h4>
-              <p className='text-white/60 tracking-normal leading-7 text-sm md:text-lg'>I&apos;ve designed multiple web & mobile experiences for multi-cross-platform devices from TV to Ipads, etc. I&apos;ve worked with small agencies and also with medium-sized companies. I previously worked with one of India&apos;s largest Ed-Tech startups, Toppr which later got acquired by Byjus. Currently I'm designing aesthetic and functional solutions for smallcase within the invest team, to enhance financial accessibility and understanding for Indian users.</p>
+              <p className='text-white/60 tracking-normal leading-7 text-sm md:text-lg'>{myBio}</p>
               
 
               <Card className='inline-flex mt-6 '>

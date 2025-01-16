@@ -8,12 +8,16 @@ export const TapeSection = () => {
     "Secure",
     "Interactive",
     "Scalable",
-    "User Friendly",
+    "User-Friendly",
     "Maintainable",
     "Responsive",
-    "Search Optimized",
+    "Search-Optimized",
     "Usable",
-    "Reliable"
+    "Reliable",
+    "Fast-Paced",
+    "Efficient",
+    "Cross-Platform",
+    "Intuitive"
   ]
   return (
 
