@@ -18,19 +18,17 @@ const Faqs = () => {
         {
             id:1,
             title:"Are you available to hire full time?",
-            description:`At the moment, I'm pretty happy where I am. Currently I am not looking for any full-time opportunities. But that being said, I am always open to discuss interesting opportunities, collaborations and other fun stuff. If you’re interested in discussing a project, making something great together,please fill the form above. Simply want to get get in touch? 
-            
-            Happy to connect on socials.`
+            description:`At the moment, I'm happy with where I am. While I'm actively seeking full-time opportunities, I'm always open to discussing exciting projects, collaborations, and creative ventures. If you're interested in working together or exploring a potential project, feel free to reach out to me directly. Additionally, if you'd like to connect, I'd be happy to engage on socials.`
         },
         {
             id:2,
             title:"How do your quote pricing works and when can we get on call?",
-            description:"Our hiring process typically involves an initial phone screen with a recruiter, followed by a technical assessment and interviews with the hiring manager and team members."
+            description:"I offer flexible pricing based on the scope of the project and specific requirements. Once we discuss your project in detail, I can provide a tailored quote. As for scheduling a call, I'm happy to connect at your convenience. Please let me know your preferred date and time, and I'll make sure to accommodate."
         },
         {
             id:3,
             title:"Can you facelift my design?",
-            description:"Our hiring process typically involves an initial phone screen with a recruiter, followed by a technical assessment and interviews with the hiring manager and team members."
+            description:"Certainly! I'd be happy to collaborate with you to give your design a fresh and polished look. Let's discuss how we can bring your vision to life!"
         },
     ]
 
@@ -100,9 +98,7 @@ const Faqs = () => {
                                                 {item.description}
                                             </motion.p>
                                         }
-                                        </div>
-                                
-
+                                    </div>
                             </Card>
                             ))}
                         </div>
