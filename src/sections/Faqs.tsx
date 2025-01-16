@@ -57,8 +57,8 @@ const Faqs = () => {
                     description="Your answers await right here"
                 />
 
-                <div className='grid grid-cols-1 md:grid-cols-5 gap-8 mt-20'>
-                    <div className='col-span-1 md:col-span-2'>
+                <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 mt-20'>
+                    <div className='col-span-1 md:col-span-2 lg:col-span-2'>
                         <Card className='relative flex flex-col justify-center items-center overflow-hidden px-10'>
                         <div className='absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-black [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)]'></div>
 
@@ -78,7 +78,7 @@ const Faqs = () => {
                             </div>
                         </Card>
                     </div>
-                    <div className='col-span-1 md:col-span-3'>
+                    <div className='col-span-1 md:col-span-2 lg:col-span-3'>
                         <div className='flex flex-col gap-4'>
                         {faqsList.map((item,index)=>(
                             <Card  key={item.id} className='hover:bg-emerald-900/10 bg-transparent transition duration-500 cursor-pointer'
