@@ -60,8 +60,9 @@ const Experience = () => {
                                         </div>
                                     </div>
 
-                                    <div className="md:col-span-2 mt-2 md:mt-0 " onClick={()=>handlwShowMore(exp.id)}>
-                                        <p className='text-sm text-white/70 tracking-wide'>{showLess[exp.id] ?  exp.description : exp.description.slice(0,120) }<span className='text-white/30 cursor-pointer'> {showLess[exp.id]?"See Less..." : "See More..."}</span></p>
+                                    <div className="md:col-span-2 mt-2 md:mt-0 " >
+                                        <p onClick={()=>handlwShowMore(exp.id)}
+                                        className='text-sm text-white/70 tracking-wide'>{showLess[exp.id] ?  exp.description : exp.description.slice(0,120) }<span className='text-white/30 cursor-pointer'> {showLess[exp.id]?"See Less..." : "See More..."}</span></p>
                                         {
                                             (expList.length - 2 === exp.id ) &&(
                                                 <div className='mt-3'>
