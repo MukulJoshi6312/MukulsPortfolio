@@ -79,7 +79,7 @@ const Faqs = () => {
                     <div className='col-span-1 md:col-span-2 lg:col-span-3'>
                         <div className='flex flex-col gap-4'>
                         {faqsList.map((item,index)=>(
-                            <Card  key={item.id} className='hover:bg-emerald-900/10 bg-transparent transition duration-500 cursor-pointer'
+                            <Card  key={item.id} className='hover:bg-emerald-900/20 bg-transparent transition duration-500 cursor-pointer'
                             onClick={()=>handleShowAnswer(item.id)}
                                 >
                                 <div className='py-4 px-6 transition duration-500'>

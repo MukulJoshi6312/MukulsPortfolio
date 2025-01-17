@@ -1,14 +1,11 @@
 "use client"
 import { motion } from 'framer-motion'
 import variants from '../utils/variants'
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckIcon from '@/assets/icons/check-circle.svg'
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
-import grainImage from '@/assets/images/grain.jpg'
 import SectionHeader from "@/components/SectionHeader";
+import summary from "@/assets/images/summary.png"
 import cryptoImage from '@/assets/images/crypto1.png'
 import Card from "@/components/Card";
 import Github from '@/assets/images/github.png'
@@ -21,22 +18,35 @@ const portfolioProjects = [
     year: "2024",
     title: "Track Crypto Real Time.",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Track crypto through a public api in real time" },
+      { title: "Compare Two crypto using graph" },
+      { title: "List crypto in dynamic list" },
     ],
     link: "https://crypto-bucks-theta.vercel.app/",
     githubLink: "https://github.com/MukulJoshi6312/DoscApp",
     image: cryptoImage,
   },
   {
+    company: "ShortSummary",
+    year: "2024",
+    title: "Summrize the artical using OpenAI",
+    results: [
+      { title: "Get the data from rapid api" },
+      { title: "Summrize the artical into short summary" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://short-summary-lime.vercel.app/",
+    githubLink: "https://github.com/MukulJoshi6312/ShortSummary/",
+    image: summary,
+  },
+  {
     company: "Positivus",
     year: "2023",
     title: "Digital Agency Landing Page",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Positivus the landing page of Website" },
+      { title: "Impliment smooth animations, framer-motion" },
+      { title: "Responsive in all devices" },
     ],
     link: "https://makes-brands.vercel.app/",
     githubLink: "https://github.com/MukulJoshi6312/MakesBrands",
@@ -47,7 +57,7 @@ const portfolioProjects = [
     year: "2022",
     title: "We have a new name, fresh look!",
     results: [
-      { title: "Boosted sales by 20%" },
+      { title: "UsabilityHub the landing page of Website" },
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
@@ -55,19 +65,7 @@ const portfolioProjects = [
     githubLink: "https://github.com/MukulJoshi6312/usabilityhub-clone",
     image: usabilityHub,
   },
-  {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://crypto-bucks-theta.vercel.app/",
-    githubLink: "https://github.com/MukulJoshi6312/DoscApp",
-    image: aiStartupLandingPage,
-  },
+  
 ];
 
 export const ProjectsSection = () => {
