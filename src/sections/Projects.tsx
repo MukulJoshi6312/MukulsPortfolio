@@ -11,6 +11,7 @@ import Card from "@/components/Card";
 import Github from '@/assets/images/github.png'
 import positivus from '@/assets/images/positivus.png'
 import usabilityHub from '@/assets/images/usabilityHub.png'
+import movieHub from '@/assets/images/movieHub.png'
 
 const portfolioProjects = [
   {
@@ -25,6 +26,18 @@ const portfolioProjects = [
     link: "https://crypto-bucks-theta.vercel.app/",
     githubLink: "https://github.com/MukulJoshi6312/DoscApp",
     image: cryptoImage,
+  },
+  {
+    company: "Movie Hub.",
+    year: "2024",
+    title: "Find all the trending movies.",
+    results: [
+      { title: "Fetch the data from the TMDB API's" },
+      { title: "Store the trending movies into APPWRITE database." },
+    ],
+    link: "https://movie-hub-six-rose.vercel.app/",
+    githubLink: "https://github.com/MukulJoshi6312/MovieHub",
+    image: movieHub,
   },
   {
     company: "ShortSummary",
