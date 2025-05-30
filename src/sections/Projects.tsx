@@ -7,6 +7,7 @@ import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
 import SectionHeader from "@/components/SectionHeader";
 import summary from "@/assets/images/summary.png"
 import cryptoImage from '@/assets/images/crypto1.png'
+import learnifyImage from '@/assets/images/Learnify.png'
 import Card from "@/components/Card";
 import Github from '@/assets/images/github.png'
 import positivus from '@/assets/images/positivus.png'
@@ -14,6 +15,19 @@ import usabilityHub from '@/assets/images/usabilityHub.png'
 import movieHub from '@/assets/images/movieHub.png'
 
 const portfolioProjects = [
+  {
+    company: "Learnify.",
+    year: "2025",
+    title: "Leanrify is a complete EdTech solution.",
+    results: [
+      { title: "Instructors to upload and manage their courses" },
+      { title: "Students to browse, buy, and learn through premium content" },
+      { title: "Seamless user authentication (OTP & JWT)" },
+    ],
+    link: "https://learnify-git-main-mukuljoshi6312s-projects.vercel.app/",
+    githubLink: "https://github.com/MukulJoshi6312/Learnify",
+    image: learnifyImage,
+  },
   {
     company: "CryptoBucks.",
     year: "2024",
