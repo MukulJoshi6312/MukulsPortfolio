@@ -22,7 +22,7 @@ const portfolioProjects = [
     results: [
       { title: "Instructors to upload and manage their courses" },
       { title: "Students to browse, buy, and learn through premium content" },
-      { title: "Seamless user authentication (OTP & JWT)" },
+      { title: "Seamless user authentication (OTP & JWT) " },
     ],
     link: "https://learnify-git-main-mukuljoshi6312s-projects.vercel.app/",
     githubLink: "https://github.com/MukulJoshi6312/Learnify",
