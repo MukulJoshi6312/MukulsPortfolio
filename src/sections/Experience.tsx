@@ -6,21 +6,30 @@ import React, { Fragment, useState } from 'react'
 const Experience = () => {
     const expList = [
         {
-            id: 1,
+    id: 1,
+    title: "Software Engineer",
+    company: "Skillmine Technology Consulting Pvt. Ltd. (Client: NeGD)",
+    duration: "Dec 2025 – Present | India",
+    description: `Working as a Frontend Engineer through Skillmine for the National e-Governance Division (NeGD), contributing to large-scale government platforms including BRICS and MOSPI (UMANG). Responsible for developing scalable, high-performance, and user-centric web applications using React and TypeScript.
+    Built reusable and modular UI components, managed complex state, and integrated secure APIs for critical public-facing services. Collaborating closely with backend teams, designers, and stakeholders to ensure seamless delivery of high-impact digital solutions.
+    Focused on performance optimization, accessibility, and maintaining clean, scalable frontend architecture to support high-traffic applications. Actively involved in debugging, code reviews, and improving overall development standards.`
+},
+        {
+            id: 2,
             title: "Software Engineer,",
             company: "Bitwise solution",
             duration: "Mar-2022 to Apr-2024 / Pune, India",
             description: "At Bitwise, I've been part of a dynamic team focused on delivering innovative software solutions. My role involves designing and developing intuitive features that enhance user experience while maintaining high-quality standards. I’ve contributed to projects that require seamless functionality, performance optimization, and collaboration with cross-functional teams to create impactful solutions for clients."
         },
         {
-            id: 2,
+            id: 3,
             title: "Android App Developer,",
             company: "PayNav",
             duration: "Jul 2021 - Feb 2022 / Bangalore, India",
             description: "Designed key features for a fintech application that allows UPI updates and splits bills with friends. Enhanced the UI by 30% for smooth animations and developed the code to ensure seamless user interactions."
         },
         {
-            id: 3,
+            id: 4,
             title: "Programmer Intern,",
             company: "SoftPro India.",
             duration: "Aug - 2020 - Noc 2020 / Bangalore, India",
@@ -64,7 +73,7 @@ const Experience = () => {
                                         <p onClick={()=>handlwShowMore(exp.id)}
                                         className='text-sm text-white/70 tracking-wide'>{showLess[exp.id] ?  exp.description : exp.description.slice(0,120) }<span className='text-white/30 cursor-pointer'> {showLess[exp.id]?"See Less..." : "See More..."}</span></p>
                                         {
-                                            (expList.length - 2 === exp.id ) &&(
+                                            (expList.length - 2 === exp.id || expList.length - 3 === exp.id) &&(
                                                 <div className='mt-3'>
                                                     <span className='text-white/40 text-xs'>~ collaborated with</span>
                                                     <div>

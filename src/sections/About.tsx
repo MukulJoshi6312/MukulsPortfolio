@@ -117,6 +117,12 @@ const hobbies = [
     top: "70%",
     left: "45%",
   },
+  {
+    title: "Coding",
+    emoji: '💻',
+    top: "20%",
+    left: "77%",
+  },
 
 ]
 

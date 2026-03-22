@@ -10,9 +10,10 @@ import dribble from '@/assets/images/dribble.png'
 import google from '@/assets/images/google.png'
 import Image from 'next/image'
 import ToolboxItem from '@/components/ToolboxItem'
+import Negd from "@/assets/images/negd.png"
 import TechIcon from '@/components/TechIcon'
 
-const logoList=[amazon,hubspot,microsoft,google,netflix,notion,zoom,dribble];
+const logoList=[amazon,hubspot,microsoft,google,netflix,Negd,notion,zoom,dribble];
 
 const CompanyLogos = () => {
   return (
