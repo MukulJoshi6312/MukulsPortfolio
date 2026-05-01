@@ -1,0 +1,30 @@
+{
+  "name": "Mukul Joshi",
+  "shortName": "Mukul",
+  "role": "Software Developer",
+  "location": "India",
+  "email": "mukuljoshi6312@gmail.com",
+  "available": true,
+  "availabilityText": "Available for opportunities",
+  "tagline": "Innovative solutions for a connected world.",
+  "intro": "Hey there! I'm Mukul a Software Developer based in India",
+  "subIntro": "Turning ideas into powerful, efficient, and user-focused software solutions. Let's bring your project to life!",
+  "bio": "I craft seamless web and mobile experiences for multi-cross-platform devices. With experience working with agencies and medium-sized companies, including India's largest Ed-Tech startup, Toppr, I've now dedicated my efforts to designing elegant and functional solutions at Bitwise and PayNav. As a self-motivated and confident professional, I view coding as a passion, continuously enhancing my skills to create impactful solutions that improve financial accessibility for Indian users.",
+  "geo": {
+    "latitude": 29.291639,
+    "longitude": 78.512694,
+    "label": "INDIA"
+  },
+  "stats": [
+    { "label": "Years Experience", "value": 4, "suffix": "+" },
+    { "label": "Projects Shipped", "value": 30, "suffix": "+" },
+    { "label": "Happy Clients", "value": 15, "suffix": "+" },
+    { "label": "Cups of Coffee", "value": 999, "suffix": "+" }
+  ],
+  "socials": [
+    { "title": "LinkedIn", "href": "https://www.linkedin.com/in/mukul-joshi-661234193/" },
+    { "title": "Instagram", "href": "https://www.instagram.com/mukul8466/" },
+    { "title": "Twitter", "href": "https://x.com/MukulJoshi1998" },
+    { "title": "GitHub", "href": "https://github.com/MukulJoshi6312" }
+  ]
+}

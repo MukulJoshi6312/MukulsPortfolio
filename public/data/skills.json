@@ -1,0 +1,26 @@
+{
+  "tools": [
+    { "title": "JavaScript", "icon": "js", "level": 92 },
+    { "title": "React JS", "icon": "react", "level": 95 },
+    { "title": "Next JS", "icon": "next", "level": 90 },
+    { "title": "TypeScript", "icon": "ts", "level": 88 },
+    { "title": "Java", "icon": "java", "level": 80 },
+    { "title": "Android", "icon": "android", "level": 78 },
+    { "title": "SQL", "icon": "sql", "level": 75 },
+    { "title": "HTML", "icon": "html", "level": 98 },
+    { "title": "CSS", "icon": "css", "level": 95 },
+    { "title": "Tailwind", "icon": "css", "level": 95 },
+    { "title": "Google Cloud", "icon": "gcd", "level": 70 },
+    { "title": "GitHub", "icon": "github", "level": 90 }
+  ],
+  "hobbies": [
+    { "title": "Dancing", "emoji": "🕺", "top": "5%", "left": "5%" },
+    { "title": "Photography", "emoji": "📷", "top": "5%", "left": "50%" },
+    { "title": "Gaming", "emoji": "🎮", "top": "35%", "left": "10%" },
+    { "title": "Hiking", "emoji": "🥾", "top": "45%", "left": "35%" },
+    { "title": "Music", "emoji": "🎵", "top": "45%", "left": "70%" },
+    { "title": "Fitness", "emoji": "🏋️‍♀️", "top": "65%", "left": "5%" },
+    { "title": "Reading", "emoji": "📚", "top": "70%", "left": "45%" },
+    { "title": "Coding", "emoji": "💻", "top": "20%", "left": "77%" }
+  ]
+}

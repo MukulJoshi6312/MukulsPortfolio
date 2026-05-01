@@ -1,5 +1,11 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  outputFileTracingRoot: __dirname,
+  transpilePackages: ["three", "@react-three/fiber"],
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>

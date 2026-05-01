@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Software Engineer",
+    "company": "Skillmine Technology Consulting Pvt. Ltd. (Client: NeGD)",
+    "duration": "Dec 2025 – Present",
+    "location": "India",
+    "description": "Working as a Frontend Engineer through Skillmine for the National e-Governance Division (NeGD), contributing to large-scale government platforms including BRICS and MOSPI (UMANG). Responsible for developing scalable, high-performance, and user-centric web applications using React and TypeScript. Built reusable and modular UI components, managed complex state, and integrated secure APIs for critical public-facing services. Collaborating closely with backend teams, designers, and stakeholders to ensure seamless delivery of high-impact digital solutions. Focused on performance optimization, accessibility, and maintaining clean, scalable frontend architecture to support high-traffic applications.",
+    "skills": ["React", "TypeScript", "Redux", "REST API", "Accessibility"],
+    "showTeam": false
+  },
+  {
+    "id": 2,
+    "title": "Software Engineer",
+    "company": "Bitwise Solution",
+    "duration": "Mar 2022 – Apr 2024",
+    "location": "Pune, India",
+    "description": "At Bitwise, I've been part of a dynamic team focused on delivering innovative software solutions. My role involves designing and developing intuitive features that enhance user experience while maintaining high-quality standards. I've contributed to projects that require seamless functionality, performance optimization, and collaboration with cross-functional teams to create impactful solutions for clients.",
+    "skills": ["React", "Next.js", "Node.js", "AWS", "Agile"],
+    "showTeam": true
+  },
+  {
+    "id": 3,
+    "title": "Android App Developer",
+    "company": "PayNav",
+    "duration": "Jul 2021 – Feb 2022",
+    "location": "Bangalore, India",
+    "description": "Designed key features for a fintech application that allows UPI updates and splits bills with friends. Enhanced the UI by 30% for smooth animations and developed the code to ensure seamless user interactions.",
+    "skills": ["Android", "Java", "Kotlin", "Firebase"],
+    "showTeam": true
+  },
+  {
+    "id": 4,
+    "title": "Programmer Intern",
+    "company": "SoftPro India",
+    "duration": "Aug 2020 – Nov 2020",
+    "location": "Bangalore, India",
+    "description": "During my internship at SoftPro, I worked with Java, JDBC, and JSP to develop an Employee Management System. I collaborated closely with my team and senior developers to design and implement various modules, ensuring the system met organizational requirements. This experience enhanced my understanding of backend development, teamwork, and the software development lifecycle.",
+    "skills": ["Java", "JDBC", "JSP", "MySQL"],
+    "showTeam": false
+  }
+]

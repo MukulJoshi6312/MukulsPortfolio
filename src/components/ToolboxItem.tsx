@@ -24,7 +24,7 @@ const ToolboxItem = ({ items, className, itemsWrapperdClassName }: {
                     <Fragment key={idx}>
                         {
                             items.map((item: ToolboxItemProps) => (
-                                <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg ">
+                                <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-[var(--border-subtle)] rounded-lg text-[var(--fg)]">
                                     <TechIcon component={item.iconType} />
                                     <span className="font-semibold">{item.title}</span>
                                     {/* <span>{item.iconType}</span> */}

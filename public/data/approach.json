@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "phase": "Phase 1",
+    "title": "Planning & Strategy",
+    "description": "We'll collaborate to map out your project's goals, target audience, and key functionalities. We'll discuss things like architecture, navigation, and content requirements.",
+    "icon": "🧭"
+  },
+  {
+    "id": 2,
+    "phase": "Phase 2",
+    "title": "Design & Prototyping",
+    "description": "I'll translate the strategy into wireframes, polished UI, and interactive prototypes — so you can feel the product before a single line of code ships.",
+    "icon": "🎨"
+  },
+  {
+    "id": 3,
+    "phase": "Phase 3",
+    "title": "Development & Launch",
+    "description": "This is where the magic happens. I cue my lo-fi playlist and translate the approved design into clean, scalable code, shipping it to production with care.",
+    "icon": "🚀"
+  }
+]

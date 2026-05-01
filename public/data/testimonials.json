@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Amit Grover",
+    "position": "Project Manager @ Bitwise",
+    "text": "Mukul was instrumental in transforming our code into a powerful business tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    "avatar": "/images/avatars/avatar1.png",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Radhika Vaisravanath",
+    "position": "Head of Team @ Bitwise",
+    "text": "Working with Mukul was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
+    "avatar": "/images/avatars/avatar2.png",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Naveen Patnaik",
+    "position": "CEO @ PayNav",
+    "text": "You have been a treasured employee of the company. Thank you for bringing your best to work every single day. Your hard work and dedication were an important part of our team.",
+    "avatar": "/images/avatars/avatar3.png",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Emily Carter",
+    "position": "Product Manager @ GlobalTech",
+    "text": "Mukul is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    "avatar": "/images/avatars/avatar4.png",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "name": "Michael Brown",
+    "position": "Director of IT @ MegaCorp",
+    "text": "Mukul's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+    "avatar": "/images/avatars/avatar5.png",
+    "rating": 5
+  }
+]
