@@ -1,7 +1,7 @@
 "use client";
 import SectionHeader from "@/components/SectionHeader";
 import { DevTerminal } from "@/components/DevTerminal";
-import { SnakeGame } from "@/components/SnakeGame";
+import { CodeContraGame } from "@/components/CodeContraGame";
 import Card from "@/components/Card";
 import { motion } from "framer-motion";
 
@@ -12,33 +12,36 @@ export const Playground = () => {
         <SectionHeader
           title="Stay a while"
           eyebrow="Dev Playground"
-          description="A little corner where you can poke around. Type a command, or play a quick round of snake."
+          description="Type a command in the terminal — or load up the run-and-gun and shoot some bugs."
         />
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="mt-16 flex flex-col gap-10">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-3"
           >
             <DevTerminal />
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-2"
           >
-            <Card className="p-6 md:p-8 h-full">
-              <div className="mb-4">
-                <span className="text-xs uppercase tracking-widest text-[var(--fg-muted)]">Coffee break</span>
-                <h3 className="font-serif text-2xl md:text-3xl mt-1">🐍 Snake</h3>
+            <Card className="p-6 md:p-8">
+              <div className="mb-5 flex items-end justify-between gap-4 flex-wrap">
+                <div>
+                  <span className="text-xs uppercase tracking-widest text-[var(--fg-muted)] font-mono">Run &amp; gun</span>
+                  <h3 className="font-serif text-2xl md:text-3xl mt-1">🔫 Code Contra</h3>
+                  <p className="text-sm text-[var(--fg-muted)] mt-1 max-w-md">
+                    5 waves of incoming bugs. Grab power-ups. Beat the P0-Outage boss.
+                  </p>
+                </div>
               </div>
-              <SnakeGame />
+              <CodeContraGame />
             </Card>
           </motion.div>
         </div>

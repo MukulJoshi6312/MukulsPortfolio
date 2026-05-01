@@ -11,7 +11,7 @@ export const ContactSection = () => {
   const { data: profile } = useData<Profile>("/data/profile.json");
 
   const handleEmailClick = () => {
-    const email = profile?.email || "mukuljoshi6312@gmail.com";
+    const email = profile?.email || "mukuljoshi.dev@gmail.com";
     window.location.href = `mailto:${email}?subject=Let's Connect&body=Hi, I would like to connect with you!`;
   };
 

@@ -1,142 +1,216 @@
 "use client";
 import { motion } from "framer-motion";
-import variants from "../utils/variants";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 
 import memojiImage from "@/assets/images/memoji-computer.png";
-import Image from "next/image";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
-import StartIcon from "@/assets/icons/star.svg";
-import SparkleIcon from "@/assets/icons/sparkle.svg";
+import ArrowDown from "@/assets/icons/arrow-down.svg";
+import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 
-import { HeroOrbit } from "@/components/HeroOrbit";
 import { MagneticButton } from "@/components/MagneticButton";
 import { useData } from "@/hooks/useData";
 import type { Profile } from "@/types";
-import { Scene2DFallback } from "@/components/ThreeDErrorBoundary";
 import { NowWidget } from "@/components/NowWidget";
+import { Typewriter } from "@/components/Typewriter";
+
+const Scene3DPlain = dynamic(
+  () =>
+    import("@/components/Scene3DPlain")
+      .then((m) => ({ default: m.Scene3DPlain }))
+      .catch(() => ({ default: () => null })),
+  { ssr: false, loading: () => null }
+);
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+};
 
 export const HeroSection = () => {
   const { data: profile } = useData<Profile>("/data/profile.json");
 
-  const handleEmailClick = () => {
-    const email = profile?.email || "mukuljoshi6312@gmail.com";
+  const handleEmail = () => {
+    const email = profile?.email || "mukuljoshi.dev@gmail.com";
     window.location.href = `mailto:${email}?subject=Let's Connect&body=Hi, I would like to connect with you!`;
   };
-  const handleProjectClick = () => {
-    window.location.href = "#projects";
+  const handleProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <div id="home" className="py-32 md:py-48 lg:py-50 relative z-0 overflow-x-clip min-h-screen flex items-center">
-      <Scene2DFallback />
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32"
+    >
+      {/* layered backdrop: 3D scene + grain + soft radial spotlight + dot grid */}
+      <Scene3DPlain />
+      <div
+        className="absolute inset-0 -z-20 pointer-events-none"
+        style={{ backgroundImage: `url(${grainImage.src})`, opacity: "var(--grain-opacity)" }}
+      />
+      <div
+        className="absolute inset-0 -z-20 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(60% 50% at 50% 40%, color-mix(in srgb, var(--accent-1) 8%, transparent), transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute inset-0 -z-20 pointer-events-none opacity-30"
+        style={{
+          backgroundImage:
+            "radial-gradient(color-mix(in srgb, var(--fg) 18%, transparent) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+        }}
+      />
 
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
-        <div className="absolute inset-0 -z-30" style={{ opacity: "var(--grain-opacity)", backgroundImage: `url(${grainImage.src})` }} />
-        <div className="size-[620px] hero-ring" />
-        <div className="size-[820px] hero-ring" />
-        <div className="size-[1020px] hero-ring" />
-        <div className="size-[1220px] hero-ring" />
-
-        <HeroOrbit size={430} rotation={-14} shouldOrbit orbitDuration="30s" shouldSpin spinDuration="3s">
-          <SparkleIcon className="size-8 text-[var(--accent-1)]/20" />
-        </HeroOrbit>
-        <HeroOrbit size={440} rotation={80} shouldOrbit orbitDuration="32s" shouldSpin spinDuration="10s">
-          <SparkleIcon className="size-5 text-[var(--accent-1)]/20" />
-        </HeroOrbit>
-        <HeroOrbit size={520} rotation={-41} shouldOrbit orbitDuration="34s">
-          <div className="size-3 rounded-full bg-[var(--accent-1)]/20" />
-        </HeroOrbit>
-        <HeroOrbit size={530} rotation={178} shouldOrbit orbitDuration="36s" shouldSpin spinDuration="3s">
-          <SparkleIcon className="size-10 text-[var(--accent-1)]/20" />
-        </HeroOrbit>
-        <HeroOrbit size={550} rotation={20} shouldOrbit orbitDuration="38s" shouldSpin spinDuration="10s">
-          <StartIcon className="size-12 text-[var(--accent-1)]" />
-        </HeroOrbit>
-        <HeroOrbit size={590} rotation={98} shouldOrbit orbitDuration="40s" shouldSpin spinDuration="6s">
-          <StartIcon className="size-8 text-[var(--accent-1)]" />
-        </HeroOrbit>
-        <HeroOrbit size={650} rotation={-5} shouldOrbit orbitDuration="42s">
-          <div className="size-3 rounded-full bg-[var(--accent-1)]/20" />
-        </HeroOrbit>
-        <HeroOrbit size={710} rotation={144} shouldOrbit orbitDuration="44s" shouldSpin spinDuration="3s">
-          <SparkleIcon className="size-14 text-[var(--accent-1)]/20" />
-        </HeroOrbit>
-        <HeroOrbit size={720} rotation={85} shouldOrbit orbitDuration="46s">
-          <div className="size-3 rounded-full bg-[var(--accent-1)]/20" />
-        </HeroOrbit>
-        <HeroOrbit size={800} rotation={72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
-          <StartIcon className="size-24 text-[var(--accent-1)]/50" />
-        </HeroOrbit>
-        <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
-          <StartIcon className="size-28 text-[var(--accent-1)]" />
-        </HeroOrbit>
-      </div>
-
-      <div className="container relative">
+      <div className="container relative z-10">
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4, scale: { type: "spring", bounce: 0.3 } }}
-          className="flex flex-col items-center"
-        >
-          <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
-            <Image src={memojiImage} alt="Mukul peeking from behind a laptop" className="size-[100px]" />
-          </motion.div>
-          <div className="surface-card border border-subtle px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
-            <div className="bg-green-500 size-2.5 rounded-full relative">
-              <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large" />
-            </div>
-            <div className="text-sm font-medium">{profile?.availabilityText ?? "Available for opportunities"}</div>
-          </div>
-        </motion.div>
-
-        <motion.div
+          variants={stagger}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={variants("bottom", 0.1)}
-          className="max-w-lg mx-auto"
+          animate="visible"
+          className="max-w-3xl mx-auto flex flex-col items-center text-center"
         >
-          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
+          {/* terminal-style breadcrumb */}
+          <motion.div
+            variants={item}
+            className="font-mono text-[11px] uppercase tracking-widest text-[var(--fg-muted)] mb-4"
+          >
+            <span className="text-[var(--accent-2)]">~</span>/portfolio/
+            <span className="text-[var(--accent-1)]">whoami</span>
+          </motion.div>
+
+          {/* avatar + availability */}
+          <motion.div variants={item} className="flex flex-col items-center gap-3">
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="relative"
+            >
+              <div
+                className="absolute -inset-3 rounded-full blur-2xl opacity-60"
+                style={{ background: "radial-gradient(circle, var(--accent-1), transparent 70%)" }}
+              />
+              <Image
+                src={memojiImage}
+                alt="Mukul peeking from behind a laptop"
+                className="relative size-24 md:size-28"
+                priority
+              />
+            </motion.div>
+            <div className="surface-card border border-subtle px-4 py-1.5 inline-flex items-center gap-3 rounded-full text-xs">
+              <span className="relative flex">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping" />
+                <span className="relative inline-flex rounded-full size-2 bg-green-500" />
+              </span>
+              <span className="font-medium">{profile?.availabilityText ?? "Available for opportunities"}</span>
+            </div>
+          </motion.div>
+
+          {/* big display name */}
+          <motion.h1
+            variants={item}
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-6 leading-[1] tracking-tight"
+          >
+            <span className="bg-gradient-accent-tri bg-[length:200%_200%] animate-gradient bg-clip-text text-transparent">
+              {profile?.name ?? "Mukul Joshi"}
+            </span>
+          </motion.h1>
+
+          {/* typewriter role */}
+          <motion.p
+            variants={item}
+            className="text-base md:text-xl mt-4 text-[var(--fg)] font-mono flex flex-wrap items-baseline justify-center gap-x-1"
+          >
+            <span className="text-[var(--fg-muted)]">{`>`}</span>
+            <span>I&apos;m a</span>
+            <Typewriter />
+            <span className="text-[var(--fg-muted)]">· based in {profile?.location ?? "India"}</span>
+          </motion.p>
+
+          {/* tagline */}
+          <motion.p
+            variants={item}
+            className="font-serif text-2xl md:text-3xl mt-8 max-w-2xl text-balance text-[var(--fg)]"
+          >
             {profile?.tagline ?? "Innovative solutions for a connected world."}
-          </h1>
-          <p className="text-center text-lg font-semibold my-4 tracking-wider">
-            Hey there! I&apos;m <span className="text-gradient">{profile?.shortName ?? "Mukul"}</span> a{" "}
-            <span className="text-gradient">{profile?.role ?? "Software Developer"}</span> based in {profile?.location ?? "India"}
-          </p>
-          <p className="mt-4 text-center text-[var(--fg-muted)] md:text-lg">
+          </motion.p>
+
+          {/* description */}
+          <motion.p
+            variants={item}
+            className="text-[var(--fg-muted)] mt-4 max-w-xl text-balance md:text-lg"
+          >
             {profile?.subIntro ??
               "Turning ideas into powerful, efficient, and user-focused software solutions. Let's bring your project to life!"}
-          </p>
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div variants={item} className="flex flex-col sm:flex-row gap-3 mt-10">
+            <MagneticButton
+              onClick={handleProjects}
+              data-cursor="hover"
+              className="cursor-pointer gap-2 border border-subtle px-6 h-12 rounded-xl surface-card text-[var(--fg)] hover:border-[var(--accent-1)] transition-colors"
+            >
+              <span className="font-semibold">Explore my work</span>
+              <ArrowDown className="size-4 animate-arrow-down text-[var(--accent-1)]" />
+            </MagneticButton>
+
+            <MagneticButton
+              onClick={handleEmail}
+              data-cursor="hover"
+              className="cursor-pointer gap-2 h-12 px-6 rounded-xl bg-gradient-accent text-black shadow-glow"
+            >
+              <span className="animate-hand-move">👋</span>
+              <span className="font-semibold">Let&apos;s Connect</span>
+              <ArrowUpRight className="size-4 -ml-1" />
+            </MagneticButton>
+          </motion.div>
+
+          {/* now widget */}
+          <motion.div variants={item} className="w-full">
+            <NowWidget />
+          </motion.div>
+
+          {/* keyboard hint */}
+          <motion.div
+            variants={item}
+            className="mt-6 text-center text-[10px] uppercase tracking-widest font-mono text-[var(--fg-muted)]"
+          >
+            Press{" "}
+            <kbd className="px-1.5 py-0.5 rounded border border-subtle text-[var(--fg)] mx-0.5">⌘K</kbd>{" "}
+            for the command palette
+          </motion.div>
         </motion.div>
-
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <MagneticButton
-            onClick={handleProjectClick}
-            data-cursor="hover"
-            className="cursor-pointer gap-2 border border-subtle px-6 h-12 rounded-xl z-30 surface-card"
-          >
-            <span className="font-semibold">Explore my work</span>
-            <ArrowDown className="size-4 animate-arrow-down" />
-          </MagneticButton>
-
-          <MagneticButton
-            onClick={handleEmailClick}
-            data-cursor="hover"
-            className="cursor-pointer gap-2 h-12 px-6 rounded-xl z-30 bg-gradient-accent text-black"
-          >
-            <span className="animate-hand-move">👋</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
-          </MagneticButton>
-        </div>
-
-        <NowWidget />
-
-        <div className="mt-6 text-center text-[10px] uppercase tracking-widest font-mono text-[var(--fg-muted)]">
-          Press <kbd className="px-1.5 py-0.5 rounded border border-subtle text-[var(--fg)]">⌘K</kbd> for the command palette
-        </div>
       </div>
-    </div>
+
+      {/* scroll-down indicator */}
+      <motion.button
+        onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+        aria-label="scroll to about"
+        data-cursor="hover"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+        className="absolute left-1/2 -translate-x-1/2 bottom-10 md:bottom-14 z-10 flex flex-col items-center gap-2 text-[var(--fg-muted)] hover:text-[var(--accent-1)] transition-colors"
+      >
+        <span className="text-[10px] font-mono uppercase tracking-widest opacity-70">scroll</span>
+        <span className="relative flex flex-col items-center">
+          <span className="block w-[1px] h-8 bg-current opacity-40" />
+          <motion.span
+            animate={{ y: [0, 24, 0], opacity: [1, 0, 1] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-0 size-1.5 rounded-full bg-[var(--accent-1)]"
+          />
+        </span>
+      </motion.button>
+    </section>
   );
 };

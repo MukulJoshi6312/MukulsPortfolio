@@ -5,7 +5,7 @@
     "company": "Skillmine Technology Consulting Pvt. Ltd. (Client: NeGD)",
     "duration": "Dec 2025 – Present",
     "location": "India",
-    "description": "Working as a Frontend Engineer through Skillmine for the National e-Governance Division (NeGD), contributing to large-scale government platforms including BRICS and MOSPI (UMANG). Responsible for developing scalable, high-performance, and user-centric web applications using React and TypeScript. Built reusable and modular UI components, managed complex state, and integrated secure APIs for critical public-facing services. Collaborating closely with backend teams, designers, and stakeholders to ensure seamless delivery of high-impact digital solutions. Focused on performance optimization, accessibility, and maintaining clean, scalable frontend architecture to support high-traffic applications.",
+    "description": "Working as a FullStack Engineer through Skillmine for the National e-Governance Division (NeGD), contributing to large-scale government platforms including BRICS and MOSPI (UMANG). Responsible for developing scalable, high-performance, and user-centric web applications using React and TypeScript. Built reusable and modular UI components, managed complex state, and integrated secure APIs for critical public-facing services. Collaborating closely with backend teams, designers, and stakeholders to ensure seamless delivery of high-impact digital solutions. Focused on performance optimization, accessibility, and maintaining clean, scalable frontend architecture to support high-traffic applications.",
     "skills": ["React", "TypeScript", "Redux", "REST API", "Accessibility"],
     "showTeam": false
   },

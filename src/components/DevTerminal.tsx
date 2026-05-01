@@ -27,7 +27,7 @@ const HELP = [
 const ABOUT = "Frontend engineer · React · Next.js · TypeScript · India.";
 const SKILLS = "JavaScript, TypeScript, React, Next.js, Node, Tailwind, Three.js, Java, Android, SQL, GCP.";
 const SOCIALS = "linkedin/mukul-joshi-661234193 · github/MukulJoshi6312 · x/MukulJoshi1998";
-const CONTACT = "mukuljoshi6312@gmail.com — happy to chat about your project.";
+const CONTACT = "mukuljoshi.dev@gmail.com — happy to chat about your project.";
 
 export const DevTerminal = () => {
   const [history, setHistory] = useState<Line[]>([
@@ -138,7 +138,7 @@ export const DevTerminal = () => {
         <span className="size-3 rounded-full bg-green-500" />
         <span className="ml-3 text-xs font-mono text-[var(--fg-muted)]">~/mukul.dev — zsh</span>
       </div>
-      <div ref={scrollRef} className="h-[320px] md:h-[380px] overflow-y-auto p-4 font-mono text-xs md:text-sm">
+      <div ref={scrollRef} className="h-[420px] md:h-[480px] overflow-y-auto p-5 md:p-6 font-mono text-xs md:text-sm">
         {history.map((l, i) =>
           l.type === "ascii" ? (
             <pre key={i} className="text-[var(--accent-1)] whitespace-pre leading-tight">{l.text}</pre>

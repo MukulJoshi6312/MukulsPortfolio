@@ -39,7 +39,7 @@ export const CommandPalette = () => {
         label: "Copy email to clipboard",
         run: async () => {
           try {
-            await navigator.clipboard.writeText("mukuljoshi6312@gmail.com");
+            await navigator.clipboard.writeText("mukuljoshi.dev@gmail.com");
           } catch {}
           setOpen(false);
         },
@@ -50,7 +50,7 @@ export const CommandPalette = () => {
         icon: "📨",
         label: "Send me an email",
         run: () => {
-          window.location.href = "mailto:mukuljoshi6312@gmail.com";
+          window.location.href = "mailto:mukuljoshi.dev@gmail.com";
           setOpen(false);
         },
       },
