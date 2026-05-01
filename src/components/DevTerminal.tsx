@@ -14,8 +14,9 @@ const ASCII = `
 
 const HELP = [
   "Available commands:",
-  "  about       — who am I",
-  "  skills      — my tech stack",
+  "  about       — who I am",
+  "  skills      — my full-stack toolkit",
+  "  experience  — where I've worked",
   "  projects    — featured work",
   "  socials     — find me online",
   "  contact     — drop me a line",
@@ -24,10 +25,49 @@ const HELP = [
   "  help        — show this menu",
 ];
 
-const ABOUT = "Frontend engineer · React · Next.js · TypeScript · India.";
-const SKILLS = "JavaScript, TypeScript, React, Next.js, Node, Tailwind, Three.js, Java, Android, SQL, GCP.";
-const SOCIALS = "linkedin/mukul-joshi-661234193 · github/MukulJoshi6312 · x/MukulJoshi1998";
-const CONTACT = "mukuljoshi.dev@gmail.com — happy to chat about your project.";
+const ABOUT = `Mukul Joshi — Full-stack Software Developer · India
+
+  4+ years shipping production web and mobile apps across
+  fintech, ed-tech, and government-scale platforms. Currently
+  building scalable frontends for UMANG / BRICS at the
+  National e-Governance Division (NeGD) via Skillmine.
+
+  I work end-to-end: design systems, REST/GraphQL APIs,
+  auth flows, databases, performance, accessibility, and
+  deploys. Comfortable in the IDE, in a stand-up, and on
+  a 2 a.m. on-call page. Self-motivated, curious, and
+  always shipping.`;
+
+const SKILLS = `LANGUAGES   JavaScript · TypeScript · Java · Kotlin · SQL · HTML · CSS
+FRONTEND    React · Next.js · React Native · Redux · Zustand · TanStack
+            Tailwind · Framer Motion · Three.js · Vite · Webpack
+BACKEND     Node.js · Express · REST · GraphQL · WebSockets · JWT/OAuth
+MOBILE      Android (Kotlin / Java) · React Native · Firebase
+DATABASE    PostgreSQL · MySQL · MongoDB · Appwrite · Redis
+DEVOPS      Docker · GitHub Actions · Vercel · AWS (S3, EC2) · GCP
+TESTING     Jest · React Testing Library · Vitest · Playwright
+TOOLS       Git · VS Code · Figma · Postman · Linear · Notion`;
+
+const EXPERIENCE = `Dec 2025 — now    Software Engineer · Skillmine → NeGD (UMANG / BRICS)
+Mar 2022 — 2024   Software Engineer · Bitwise Solution, Pune
+Jul 2021 — 2022   Android App Developer · PayNav, Bangalore
+Aug 2020 — 2020   Programmer Intern · SoftPro India, Bangalore
+
+Run \`projects\` to see what I've shipped along the way.`;
+
+const SOCIALS = `  GitHub      https://github.com/MukulJoshi6312
+  LinkedIn    https://linkedin.com/in/mukul-joshi-661234193
+  X / Twitter https://x.com/MukulJoshi1998
+  Instagram   https://instagram.com/mukul8466
+  Email       mukuljoshi.dev@gmail.com`;
+
+const CONTACT = `  ✉  mukuljoshi.dev@gmail.com
+  📍 India · IST (UTC+05:30)
+  ⏱  Typical response time: under 12 hours
+
+  Open to: full-time roles, freelance projects, contracting,
+  and async collaboration. Happy to jump on a 30-min call to
+  scope your idea — drop a line and let's build something.`;
 
 export const DevTerminal = () => {
   const [history, setHistory] = useState<Line[]>([
@@ -85,6 +125,11 @@ export const DevTerminal = () => {
         return;
       case "skills":
         append([{ type: "out", text: SKILLS }]);
+        return;
+      case "experience":
+      case "exp":
+      case "work":
+        append([{ type: "out", text: EXPERIENCE }]);
         return;
       case "projects":
         append([

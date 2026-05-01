@@ -160,8 +160,17 @@ export const CodeContraGame = () => {
       ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "a", "A", "d", "D", "w", "W", "s", "S", " ", "j", "J", "k", "K"].includes(
         k
       );
+    const isTypingTarget = (t: EventTarget | null) => {
+      const el = t as HTMLElement | null;
+      if (!el) return false;
+      const tag = el.tagName;
+      return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || el.isContentEditable;
+    };
     const down = (e: KeyboardEvent) => {
-      if (isGameKey(e.key)) e.preventDefault();
+      // Don't intercept keys when the user is typing in an input.
+      if (isTypingTarget(e.target)) return;
+      // Only block default scroll/etc. while the game is actually running.
+      if (running && isGameKey(e.key)) e.preventDefault();
       if (e.key === "Enter") {
         if (over) reset();
         else if (!running) setRunning(true);
@@ -170,6 +179,7 @@ export const CodeContraGame = () => {
       keysRef.current[e.key] = true;
     };
     const up = (e: KeyboardEvent) => {
+      if (isTypingTarget(e.target)) return;
       keysRef.current[e.key] = false;
     };
     window.addEventListener("keydown", down);

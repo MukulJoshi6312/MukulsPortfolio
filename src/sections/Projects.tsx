@@ -17,9 +17,11 @@ export const ProjectsSection = () => {
   const [activeIdx, setActiveIdx] = useState(0);
   const active = list[activeIdx];
 
-  // Arrow-key navigation when section in view
+  // Arrow-key navigation when section in view (don't intercept while typing in inputs)
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
       const el = document.getElementById("projects");
       if (!el) return;
       const r = el.getBoundingClientRect();
