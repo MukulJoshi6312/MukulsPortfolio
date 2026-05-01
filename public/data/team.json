@@ -1,0 +1,7 @@
+[
+  { "id": 1, "src": "/images/team/team1.avif", "alt": "Teammate 1" },
+  { "id": 2, "src": "/images/team/team2.avif", "alt": "Teammate 2" },
+  { "id": 3, "src": "/images/team/team3.avif", "alt": "Teammate 3" },
+  { "id": 4, "src": "/images/team/team4.avif", "alt": "Teammate 4" },
+  { "id": 5, "src": "/images/team/team5.avif", "alt": "Teammate 5" }
+]

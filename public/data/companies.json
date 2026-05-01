@@ -1,0 +1,11 @@
+[
+  { "name": "Amazon", "logo": "/images/companies/amazon.png" },
+  { "name": "HubSpot", "logo": "/images/companies/hubspot.png" },
+  { "name": "Microsoft", "logo": "/images/companies/microsoft.png" },
+  { "name": "Google", "logo": "/images/companies/google.png" },
+  { "name": "Netflix", "logo": "/images/companies/netflix.png" },
+  { "name": "NeGD", "logo": "/images/companies/negd.png" },
+  { "name": "Notion", "logo": "/images/companies/notion.png" },
+  { "name": "Zoom", "logo": "/images/companies/zoom.png" },
+  { "name": "Dribbble", "logo": "/images/companies/dribble.png" }
+]

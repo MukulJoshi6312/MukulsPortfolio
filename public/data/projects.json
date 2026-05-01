@@ -1,0 +1,92 @@
+[
+  {
+    "id": "learnify",
+    "company": "Learnify",
+    "year": "2025",
+    "title": "Learnify is a complete EdTech solution.",
+    "results": [
+      "Instructors to upload and manage their courses",
+      "Students to browse, buy, and learn through premium content",
+      "Seamless user authentication (OTP & JWT)"
+    ],
+    "stack": ["Next.js", "Node.js", "MongoDB", "TailwindCSS"],
+    "link": "https://learnify-git-main-mukuljoshi6312s-projects.vercel.app/",
+    "githubLink": "https://github.com/MukulJoshi6312/Learnify",
+    "image": "/images/projects/learnify.png"
+  },
+  {
+    "id": "cryptobucks",
+    "company": "CryptoBucks",
+    "year": "2024",
+    "title": "Track Crypto Real Time.",
+    "results": [
+      "Track crypto through a public api in real time",
+      "Compare two crypto using interactive graphs",
+      "List crypto in dynamic, sortable list"
+    ],
+    "stack": ["React", "Chart.js", "REST API", "TailwindCSS"],
+    "link": "https://crypto-bucks-theta.vercel.app/",
+    "githubLink": "https://github.com/MukulJoshi6312/DoscApp",
+    "image": "/images/projects/crypto.png"
+  },
+  {
+    "id": "moviehub",
+    "company": "Movie Hub",
+    "year": "2024",
+    "title": "Find all the trending movies.",
+    "results": [
+      "Fetch the data from the TMDB API",
+      "Store the trending movies into Appwrite database",
+      "Search-as-you-type with debounced queries"
+    ],
+    "stack": ["React", "TMDB API", "Appwrite", "Vite"],
+    "link": "https://movie-hub-six-rose.vercel.app/",
+    "githubLink": "https://github.com/MukulJoshi6312/MovieHub",
+    "image": "/images/projects/moviehub.png"
+  },
+  {
+    "id": "shortsummary",
+    "company": "ShortSummary",
+    "year": "2024",
+    "title": "Summarize the article using OpenAI",
+    "results": [
+      "Get the data from rapid api",
+      "Summarize the article into a short summary",
+      "Increased mobile traffic by 35%"
+    ],
+    "stack": ["React", "OpenAI", "RapidAPI", "Redux Toolkit"],
+    "link": "https://short-summary-lime.vercel.app/",
+    "githubLink": "https://github.com/MukulJoshi6312/ShortSummary/",
+    "image": "/images/projects/summary.png"
+  },
+  {
+    "id": "positivus",
+    "company": "Positivus",
+    "year": "2023",
+    "title": "Digital Agency Landing Page",
+    "results": [
+      "Positivus the landing page of website",
+      "Implement smooth animations with framer-motion",
+      "Responsive in all devices"
+    ],
+    "stack": ["React", "Framer Motion", "TailwindCSS"],
+    "link": "https://makes-brands.vercel.app/",
+    "githubLink": "https://github.com/MukulJoshi6312/MakesBrands",
+    "image": "/images/projects/positivus.png"
+  },
+  {
+    "id": "usabilityhub",
+    "company": "UsabilityHub",
+    "year": "2022",
+    "title": "We have a new name, fresh look!",
+    "results": [
+      "UsabilityHub the landing page of website",
+      "Expanded customer reach by 35%",
+      "Increased brand awareness by 15%"
+    ],
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "link": "https://usabilityhub-clone-one.vercel.app/",
+    "githubLink": "https://github.com/MukulJoshi6312/usabilityhub-clone",
+    "image": "/images/projects/usabilityhub.png"
+  }
+]
